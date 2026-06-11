@@ -1,3 +1,10 @@
 .DS_Store
 assets/cats/.png
 embedded-assets/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
