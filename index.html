@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="小猫性格测试：用 12 道生活场景题，找到最像你的猫咪人格。"
+    >
+    <meta property="og:title" content="喵格实验室 | 小猫性格测试">
+    <meta property="og:description" content="用 12 道生活场景题，找到最像你的猫咪人格。">
+    <title>喵格实验室 | 小猫性格测试</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="页面标题">
+      <a class="brand" href="#home-screen" aria-label="返回测试首页">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>喵格实验室</strong>
+          <small>CATALOGUE OF YOU</small>
+        </span>
+      </a>
+    </header>
+
+    <main>
+      <section class="screen home-screen" id="home-screen" aria-labelledby="home-title">
+        <div class="shell home-shell">
+          <div class="home-copy">
+            <p class="meta-pill">PERSONALITY FIELD NOTE</p>
+            <h1 id="home-title">领取你的<br>小猫人格档案</h1>
+            <p class="lead">
+              选完 12 个日常反应，实验室会把你的安稳、好奇、表达、边界、秩序和照料感，折算成一只专属小猫。
+            </p>
+
+            <button class="primary-button" id="start-button" type="button">
+              开始建档
+            </button>
+          </div>
+
+          <div class="specimen-card" aria-label="测试概览">
+            <div class="specimen-stamp">MEOW<br>SCAN</div>
+            <div class="specimen-lines">
+              <span>12 道轻松题</span>
+              <span>6 个隐藏维度</span>
+              <span>12 份小猫档案</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen quiz-screen is-hidden" id="quiz-screen" aria-live="polite">
+        <div class="shell quiz-shell">
+          <div class="progress-wrap" aria-label="答题进度">
+            <div class="progress-top">
+              <span id="question-count">Q1 / Q12</span>
+              <span id="answered-count">已选 0/12</span>
+            </div>
+            <div class="progress-track">
+              <span id="progress-bar"></span>
+            </div>
+          </div>
+
+          <form id="quiz-form">
+            <fieldset class="question-card">
+              <legend>
+                <span id="question-number">1</span>
+                <strong id="question-title"></strong>
+              </legend>
+              <div class="options" id="options"></div>
+            </fieldset>
+
+            <nav class="quiz-nav" aria-label="答题导航">
+              <button class="secondary-button" id="prev-button" type="button">
+                上一题
+              </button>
+              <button class="primary-button" id="next-button" type="button" disabled>
+                下一题
+              </button>
+            </nav>
+          </form>
+        </div>
+      </section>
+
+      <section class="screen result-screen is-hidden" id="result-screen" aria-live="polite">
+        <div class="shell result-shell">
+          <p class="meta-pill">你的猫咪人格是</p>
+          <h1 id="result-title"></h1>
+          <div class="result-layout">
+            <figure class="cat-frame">
+              <img id="result-image" src="" alt="">
+            </figure>
+            <div class="result-copy">
+              <p class="result-tags" id="result-tags"></p>
+              <p class="result-text" id="result-description"></p>
+              <div class="result-note">
+                <strong>相处建议</strong>
+                <p id="result-advice"></p>
+              </div>
+              <div class="result-note">
+                <strong>适合的小猫角落</strong>
+                <p id="result-corner"></p>
+              </div>
+            </div>
+          </div>
+          <button class="secondary-button restart-button" id="restart-button" type="button">
+            重新测试
+          </button>
+          <button class="primary-button share-button" id="share-button" type="button">
+            分享我的小猫
+          </button>
+          <p class="share-feedback" id="share-feedback" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
